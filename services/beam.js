@@ -187,7 +187,7 @@ beam.prototype.connectChat = function(user, endpoint) {
 			//log.debug('Raw: ' + data);
 			data = JSON.parse(data);
 			
-			if (data.type == 'reply' && data.error == null && 'authenticated' in data && data.data.authenticated) {
+			if (data.type == 'reply' && data.error == null && data.data.authenticated) {
 				self.emit('connected');	
 			}
 			
