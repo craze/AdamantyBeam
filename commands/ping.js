@@ -49,5 +49,5 @@ function commands(data) {
 }
 
 function bot(data) {
-	this.sendMessage('This bot is running BlipBot. Get your own at http://blipbot.dead-i.co.uk/', data.user.name);
+	this.sendMessage('This bot is running BlipBot. Get your own at http://go.a-d-a.tv/blipbot', data.user.name);
 }

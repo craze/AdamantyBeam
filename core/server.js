@@ -59,7 +59,7 @@ module.exports = web = function(config, db, services, modules) {
 				}
 			}
 			
-			return cb('BlipBot is not in this channel.');
+			return cb('Adamanty is not in this channel.');
 		});
 		
 		if (!('userid' in c.request.session)) {
@@ -123,7 +123,7 @@ module.exports = web = function(config, db, services, modules) {
 						}, 60000);
 
 						service.once('connected', function() {
-							service.sendMessage('I am a Beam chat bot, and I have been asked to join here from the web interface. Please type /mod BlipBot if you authorized this request.');
+							service.sendMessage('I am a Beam chat bot, and I have been asked to join here from the web interface. Please type /mod Adamanty if you authorized this request.');
 						});
 
 						service.once('authenticated', function() {
@@ -158,7 +158,7 @@ module.exports = web = function(config, db, services, modules) {
 							if (records.length < 1) {
 								return callback(new Error('unable to create service'));
 							}
-							service.sendMessage('BlipBot is now online. You can now manage me from the web interface.');
+							service.sendMessage('Adamanty is now online. You can now manage me from the web interface.');
 							service.id = records[0]._id;
 							services[service.id] = service;
 							callback(null, service);

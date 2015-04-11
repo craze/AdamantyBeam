@@ -187,7 +187,7 @@ beam.prototype.connectChat = function(user, endpoint) {
 			//log.debug('Raw: ' + data);
 			data = JSON.parse(data);
 			
-			if (data.type == 'reply' && data.error == null && 'authenticated' in data.data && data.data.authenticated) {
+			if (data.type == 'reply' && data.error == null && 'authenticated' in data && data.data.authenticated) {
 				self.emit('connected');	
 			}
 			
@@ -474,7 +474,7 @@ beam.prototype.requireRole = function(groups, sender, role) {
 	var allowed = this.hasRole(groups, role) || this.bypass.indexOf(sender) != -1;
 	if (!allowed && groups.indexOf('blipbot') != -1 && this.config.admins.indexOf(sender) != -1) {
 		this.bypass.push(sender);
-		this.sendMessage('A BlipBot admin, @' + sender + ', is using admin override. He can run some commands, but has no moderator abilities.');
+		this.sendMessage('An Adamanty admin, @' + sender + ', is using admin override. He/she can run some commands, but has no moderator abilities.');
 		allowed = true;
 	}
 	if (!allowed) {

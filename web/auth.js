@@ -76,7 +76,7 @@ module.exports = function(app, services) {
 			if (err) {
 				return log.warn(err);
 			}
-			res.redirect('http://blipbot.dead-i.co.uk/');
+			res.redirect('http://beam.a-d-a.tv/');
 		});
 	});
 	
